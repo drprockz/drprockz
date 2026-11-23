@@ -127,7 +127,7 @@ Claude Code stalls the moment you walk away from a permission prompt. [AFK](http
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
-  <img src="assets/activity-dark.svg" width="100%" alt="Contribution heatmap for the last 12 months, with total contributions, active days, current streak and longest streak.">
+  <img src="assets/activity-dark.svg" width="100%" alt="Contribution heatmap for the last 12 months, with total contributions, active days, longest streak and busiest day.">
 </picture>
 
 <br>

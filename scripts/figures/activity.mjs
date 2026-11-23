@@ -6,7 +6,7 @@ const fmt = (n) => n.toLocaleString('en-US');
 /**
  * Contribution heatmap for the last year.
  * @param t      theme tokens
- * @param data   { total, weeks: [[{date:'YYYY-MM-DD', count, level:0..4, weekday:0..6}]] }
+ * @param data   { total, weeks: [[{date:'YYYY-MM-DD', count, weekday:0..6}]] }
  */
 export function activity(t, data) {
   const W = 880, H = 290, PAD = 48;
@@ -20,12 +20,13 @@ export function activity(t, data) {
   const active = days.filter((d) => d.count > 0).length;
   let longest = 0, run = 0;
   for (const d of days) { run = d.count > 0 ? run + 1 : 0; longest = Math.max(longest, run); }
-  // A day with nothing yet does not break the streak until it is over.
-  let current = 0;
-  for (let i = days.length - 1; i >= 0; i--) {
-    if (days[i].count > 0) current++;
-    else if (i !== days.length - 1) break;
-  }
+  const best = Math.max(0, ...days.map((d) => d.count));
+
+  // Shade by rank among active days, a quarter of them per step. A few huge
+  // days would otherwise push every ordinary day into the faintest shade.
+  const ranked = days.map((d) => d.count).filter(Boolean).sort((x, y) => x - y);
+  const cut = [0.25, 0.5, 0.75].map((q) => ranked[Math.floor(q * (ranked.length - 1))] ?? 0);
+  const level = (n) => (n === 0 ? 0 : 1 + cut.filter((c) => n > c).length);
 
   const css = `.big{font-size:30px;font-weight:800;letter-spacing:-.8px}.cap{font-size:11.5px}.mo{font-size:10.5px}
 .scan{fill:${t.ag};opacity:0;animation:scan 9s linear infinite}
@@ -36,8 +37,8 @@ export function activity(t, data) {
   const stats = [
     [fmt(data.total), 'contributions'],
     [fmt(active), 'active days'],
-    [`${fmt(current)}d`, 'current streak'],
     [`${fmt(longest)}d`, 'longest streak'],
+    [fmt(best), 'busiest day'],
   ];
   stats.forEach(([n, cap], i) => {
     const x = X0 + i * Math.round(gridW / 4);
@@ -57,7 +58,7 @@ export function activity(t, data) {
   weeks.forEach((week, wi) => {
     const x = X0 + wi * pitch;
     for (const d of week) {
-      b += `<rect x="${x}" y="${Y0 + d.weekday * pitch}" width="${cell}" height="${cell}" rx="2.5" fill="${t.heat[d.level]}"/>`;
+      b += `<rect x="${x}" y="${Y0 + d.weekday * pitch}" width="${cell}" height="${cell}" rx="2.5" fill="${t.heat[level(d.count)]}"/>`;
     }
   });
   b += `<rect x="${X0}" y="${Y0 - 2}" width="3" height="${7 * pitch + 1}" rx="1.5" class="scan"/>`;
@@ -72,6 +73,6 @@ export function activity(t, data) {
   return doc({
     w: W, h: H, t, css, body: b,
     title: 'Contribution activity, last 12 months',
-    desc: `${fmt(data.total)} contributions on ${fmt(active)} active days. Current streak ${current} days, longest streak ${longest} days.`,
+    desc: `${fmt(data.total)} contributions on ${fmt(active)} active days. Longest streak ${longest} days, busiest day ${fmt(best)} contributions.`,
   });
 }

@@ -7,9 +7,8 @@ import { dirname, join } from 'node:path';
 import { themes } from './lib/theme.mjs';
 import { activity } from './figures/activity.mjs';
 
-const LEVELS = { NONE: 0, FIRST_QUARTILE: 1, SECOND_QUARTILE: 2, THIRD_QUARTILE: 3, FOURTH_QUARTILE: 4 };
 const QUERY = `query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{
-  totalContributions weeks{contributionDays{date contributionCount contributionLevel weekday}}}}}}`;
+  totalContributions weeks{contributionDays{date contributionCount weekday}}}}}}`;
 
 async function fetchCalendar(login, token) {
   const res = await fetch('https://api.github.com/graphql', {
@@ -23,9 +22,7 @@ async function fetchCalendar(login, token) {
   if (!cal) throw new Error(`no contribution calendar for "${login}": ${JSON.stringify(json.errors ?? json).slice(0, 300)}`);
   return {
     total: cal.totalContributions,
-    weeks: cal.weeks.map((w) => w.contributionDays.map((d) => ({
-      date: d.date, count: d.contributionCount, level: LEVELS[d.contributionLevel] ?? 0, weekday: d.weekday,
-    }))),
+    weeks: cal.weeks.map((w) => w.contributionDays.map((d) => ({ date: d.date, count: d.contributionCount, weekday: d.weekday }))),
   };
 }
 
@@ -40,7 +37,7 @@ function sampleCalendar() {
     const busy = d.getUTCDay() % 6 === 0 ? 0.35 : 0.8;
     const count = rnd() < busy ? Math.floor(rnd() * rnd() * 18) : 0;
     total += count;
-    weeks.at(-1).push({ date: d.toISOString().slice(0, 10), count, level: count === 0 ? 0 : Math.min(4, 1 + Math.floor(count / 4)), weekday: d.getUTCDay() });
+    weeks.at(-1).push({ date: d.toISOString().slice(0, 10), count, weekday: d.getUTCDay() });
   }
   return { total, weeks };
 }

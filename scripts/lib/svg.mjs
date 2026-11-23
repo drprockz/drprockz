@@ -23,15 +23,16 @@ export function doc({ w, h, t, title, desc = '', css = '', defs = '', body }) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" font-size="12" role="img" aria-labelledby="t d">
 <title id="t">${esc(title)}</title><desc id="d">${esc(desc)}</desc>
 <style>${baseCss(t)}${css}</style>
-<defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="${t.grid}"/></pattern>${defs}</defs>
+<defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="${t.grid}"/></pattern>
+<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${t.ag}" stop-opacity=".55"/><stop offset=".3" stop-color="${t.line}"/><stop offset=".7" stop-color="${t.line}"/><stop offset="1" stop-color="${t.hu}" stop-opacity=".5"/></linearGradient>${defs}</defs>
 ${body}
 </svg>
 `;
 }
 
-/** Rounded panel with the dot grid and an optional top-left figure label. */
+/** Rounded panel: dot grid, a border that runs teal to orange corner to corner, optional figure label. */
 export function panel(w, h, t, { fig = '', meta = '' } = {}) {
-  return `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="14" fill="${t.bg}" stroke="${t.line}"/>
+  return `<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="14" fill="${t.bg}" stroke="url(#edge)"/>
 <rect x="1" y="1" width="${w - 2}" height="${h - 2}" rx="13" fill="url(#dots)"/>
 ${fig ? `<text x="28" y="36" class="lbl">${esc(fig)}</text>` : ''}
 ${meta ? `<text x="${w - 28}" y="36" class="lbl" text-anchor="end">${esc(meta)}</text>` : ''}`;

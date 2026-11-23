@@ -2,7 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-    <img src="assets/hero-dark.svg" width="100%" alt="Darshan Parmar, AI Engineer. I build AI agents that keep working while you're away, and stop to ask before anything irreversible.">
+    <img src="assets/hero-dark.svg" width="100%" alt="Darshan Parmar, AI Engineer. I build AI agents that keep working while you're away, and stop to ask before anything irreversible. A rotating 3D mesh of agents surrounds one router; a few orange nodes wait for a human.">
   </picture>
 </div>
 
@@ -17,16 +17,20 @@ I'm an AI engineer in Mumbai. I design and ship agent systems: tool-using LLM ag
 
 One idea runs through all of it: **let the agent do the work, and make it ask before anything it can't undo.**
 
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
+  <img src="assets/divider-dark.svg" width="100%" alt="">
+</picture>
 
 ## CRUZ, a personal AI command center
 
 One natural-language interface in front of twelve specialist agents and five event-driven ones, running around the clock on a Mac mini. I talk to CRUZ; CRUZ decides who does the work.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/cruz-architecture-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/cruz-architecture-light.svg">
-  <img src="assets/cruz-architecture-dark.svg" width="100%" alt="CRUZ architecture. Voice, web and Telegram input reach CruzAgent, which uses Claude's native tool use as the router to twelve specialists. Deploys and email pass a human approval gate. A Redis-backed worker runs five event-driven agents. Memory has four layers, and models are routed between Claude Sonnet, local Qwen and Llama, and Gemini Flash.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cruz-stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/cruz-stack-light.svg">
+  <img src="assets/cruz-stack-dark.svg" width="100%" alt="CRUZ, exploded view: four stacked layers. Interface: voice with wake word, web and PWA, Telegram. Router: CruzAgent, where Claude's tool call is the routing decision. Specialists: twelve agents called as tools in parallel, plus five event-driven agents; deploys and email wait for a human. Memory: four layers, working, session, semantic and procedural.">
 </picture>
 
 - **Routing without a router.** Claude's native tool use picks the specialists and runs them in parallel. A deterministic keyword pre-filter narrows the tool list first, so there is no second LLM call just to decide who works.
@@ -34,6 +38,18 @@ One natural-language interface in front of twelve specialist agents and five eve
 - **Cost-aware model routing.** Claude Sonnet handles orchestration, hard code and review. Local Qwen and Llama models (through Ollama) handle drafts, docs and tests. Gemini Flash handles lead discovery.
 - **Four memory layers**, from the context window to Qdrant vector search over everything it has ever been told.
 - **Voice in, voice out.** Wake word, faster-whisper for speech-to-text, a local TTS model for replies.
+
+<details>
+<summary><b>Flat diagram: request path, event loop, memory, model routing</b></summary>
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cruz-architecture-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/cruz-architecture-light.svg">
+  <img src="assets/cruz-architecture-dark.svg" width="100%" alt="CRUZ architecture. Voice, web and Telegram input reach CruzAgent, which uses Claude's native tool use as the router to twelve specialists. Deploys and email pass a human approval gate. A Redis-backed worker runs five event-driven agents. Memory has four layers, and models are routed between Claude Sonnet, local Qwen and Llama, and Gemini Flash.">
+</picture>
+
+</details>
 
 <p align="center">
   <picture>
@@ -48,7 +64,11 @@ One natural-language interface in front of twelve specialist agents and five eve
   </picture>
 </p>
 
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
+  <img src="assets/divider-dark.svg" width="100%" alt="">
+</picture>
 
 ## AFK, a permission layer for Claude Code
 
@@ -59,7 +79,7 @@ Claude Code stalls the moment you walk away from a permission prompt. [AFK](http
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/afk-card-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="assets/afk-card-light.svg">
-      <img src="assets/afk-card-dark.svg" width="410" alt="AFK: the permission layer that lets Claude Code keep working while you step away. Learns your approve and deny patterns, auto-approves safe actions, queues destructive ones for review, takes a git checkpoint before anything risky, and lets you approve from your phone. Open source, MIT.">
+      <img src="assets/afk-card-dark.svg" width="410" alt="AFK: the permission layer that lets Claude Code keep working while you're away. Learns your approve and deny patterns, auto-approves safe actions, queues destructive ones for review, takes a git checkpoint before anything risky, and lets you approve from your phone. Open source, MIT.">
     </picture>
   </a>
   <picture>
@@ -74,7 +94,11 @@ Claude Code stalls the moment you walk away from a permission prompt. [AFK](http
 /plugin install afk@drprockz
 ```
 
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
+  <img src="assets/divider-dark.svg" width="100%" alt="">
+</picture>
 
 ## MCP servers and Claude Code tooling
 
@@ -93,7 +117,11 @@ Claude Code stalls the moment you walk away from a permission prompt. [AFK](http
   </a>
 </p>
 
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
+  <img src="assets/divider-dark.svg" width="100%" alt="">
+</picture>
 
 ## Stack
 
@@ -120,17 +148,25 @@ Claude Code stalls the moment you walk away from a permission prompt. [AFK](http
   </picture>
 </p>
 
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
+  <img src="assets/divider-dark.svg" width="100%" alt="">
+</picture>
 
 ## Activity
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
-  <img src="assets/activity-dark.svg" width="100%" alt="Contribution heatmap for the last 12 months, with total contributions, active days, longest streak and busiest day.">
+  <img src="assets/activity-dark.svg" width="100%" alt="3D contribution skyline for the last 12 months, one bar per day, with total contributions, active days, longest streak and busiest day.">
 </picture>
 
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
+  <img src="assets/divider-dark.svg" width="100%" alt="">
+</picture>
 
 ## How I work
 
@@ -139,10 +175,14 @@ Claude Code stalls the moment you walk away from a permission prompt. [AFK](http
 - **Autonomy is earned.** Agents get more room as they prove themselves, and the irreversible always waits for a human.
 - **Spend where it matters.** The best model for the hard reasoning, a local one for the routine.
 
-<br>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/divider-light.svg">
+  <img src="assets/divider-dark.svg" width="100%" alt="">
+</picture>
 
 <p align="center">
-  <sub>Every figure on this page is an SVG drawn by <a href="scripts/build.mjs"><code>scripts/build.mjs</code></a>, and the heatmap is redrawn daily by <a href=".github/workflows/activity.yml">a GitHub Action</a>. No third-party widgets.</sub>
+  <sub>Every figure on this page is an SVG drawn by <a href="scripts/build.mjs"><code>scripts/build.mjs</code></a>, and the skyline is redrawn daily by <a href=".github/workflows/activity.yml">a GitHub Action</a>. No third-party widgets.</sub>
 </p>
 <p align="center">
   <a href="https://stackoverflow.com/users/21765452">Stack Overflow</a> &nbsp;·&nbsp;

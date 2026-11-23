@@ -29,7 +29,7 @@ export function cruzArchitecture(t) {
   const W = 880, H = 572;
   const css = `.h{font-size:15px;font-weight:700}.n{font-size:11.5px}.r{font-size:10px}
 .gatebox{fill:${t.huSoft};stroke:${t.hu}}.gated{fill:${t.bg2};stroke:${t.hu}}`;
-  let b = panel(W, H, t, { fig: 'FIG. 01 — CRUZ: REQUEST PATH, EVENT LOOP, MEMORY', meta: 'PRIVATE REPO' });
+  let b = panel(W, H, t, { fig: 'FIG. 01B — CRUZ: REQUEST PATH, EVENT LOOP, MEMORY', meta: 'PRIVATE REPO' });
 
   // inputs
   b += txt(32, 78, 'INPUT', 'lbl');

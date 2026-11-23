@@ -9,6 +9,14 @@ export const themes = {
     hu: '#FF8E4D', huSoft: 'rgba(255,142,77,.13)',
     stop: '#F2707A',
     heat: ['#171C24', '#12423E', '#16695F', '#1FA08D', '#34D6B9'],
+    shade: '#0B0E13', // what a face is blended toward as it turns from the light
+    // face shades for extruded shapes: [top, left, right]
+    iso: {
+      plate: ['#1B212C', '#131821', '#0E1219'],
+      dim: ['#2B3341', '#1F2631', '#181D26'],
+      ag: ['#7AF3DE', '#34D6B9', '#1C9A86'],
+      hu: ['#FFBD92', '#FF8E4D', '#C7662D'],
+    },
   },
   light: {
     name: 'light',
@@ -18,6 +26,13 @@ export const themes = {
     hu: '#CF521A', huSoft: 'rgba(207,82,26,.11)',
     stop: '#C4374A',
     heat: ['#EBE8DF', '#BFE5DD', '#7DCFC1', '#34AE9C', '#0B8F7D'],
+    shade: '#0F4F47',
+    iso: {
+      plate: ['#FFFFFF', '#EAE7DE', '#DBD7CB'],
+      dim: ['#F4F2EB', '#DEDAD0', '#CEC9BC'],
+      ag: ['#58D3C1', '#0B8F7D', '#08705F'],
+      hu: ['#F5A174', '#CF521A', '#A8410F'],
+    },
   },
 };
 

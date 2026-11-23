@@ -91,7 +91,7 @@ export function hero(t) {
 `;
   // tilted orbit: the back half is drawn before the mesh, the front half after it
   const orbit = (sweep) => `<path d="M${C.x - 168} ${C.y}A168 44 0 0 ${sweep} ${C.x + 168} ${C.y}" class="ring" transform="rotate(-16 ${C.x} ${C.y})"/>`;
-  const sat = `<g transform="rotate(-16 ${C.x} ${C.y})"><circle r="3.6" fill="${t.hu}"><animateMotion dur="14s" repeatCount="indefinite" path="M${C.x - 168} ${C.y}A168 44 0 0 0 ${C.x + 168} ${C.y}A168 44 0 0 0 ${C.x - 168} ${C.y}"/></circle></g>`;
+  const sat = `<g class="spin" transform="rotate(-16 ${C.x} ${C.y})"><circle r="3.6" fill="${t.hu}"><animateMotion dur="14s" repeatCount="indefinite" path="M${C.x - 168} ${C.y}A168 44 0 0 0 ${C.x + 168} ${C.y}A168 44 0 0 0 ${C.x - 168} ${C.y}"/></circle></g>`;
 
   const hud = [
     { label: '12 specialists', x: 530, y: 58, to: [628, 116], from: 'br' },

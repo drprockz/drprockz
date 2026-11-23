@@ -1,81 +1,151 @@
-# Hey, I'm Darshan 👋
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+    <img src="assets/hero-dark.svg" width="100%" alt="Darshan Parmar, AI Engineer. I build AI agents that keep working while you're away, and stop to ask before anything irreversible.">
+  </picture>
+</div>
 
-Full-stack developer from Mumbai with 4+ years of building things across the web -- from WordPress sites to multi-tenant SaaS platforms. I like clean architecture, obsessive planning before writing a single line of code, and starting way too many side projects.
-
-Currently working with **Next.js**, **NestJS**, **PostgreSQL**, and **AWS** most days. Previously spent a lot of time in the WordPress/PHP world and still do when the project calls for it.
-
-I believe in shipping real products, not just writing code.
-
----
-
-### What I'm up to
-
-- 🔨 Building full-stack SaaS products with multi-tenant architecture
-- 🌐 Crafting performant websites with scroll-driven animations (GSAP, Three.js)
-- 📐 Deep into system design, RBAC patterns, and infrastructure planning
-- 🧠 Always learning -- currently leveling up on Shopify Liquid and advanced AWS patterns
-
----
-
-### Tech Stack
-
-**Languages & Frameworks**
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Vue.js](https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
-![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat-square&logo=wordpress&logoColor=white)
-
-**Data & Infrastructure**
-
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white)
-
-**Styling & Animation**
-
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
-![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat-square&logo=greensock&logoColor=black)
-![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
-
----
-
-### GitHub Stats
-
-<p>
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=drprockz&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
-  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=drprockz&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+<p align="center">
+  <a href="https://darshanparmar.com"><b>darshanparmar.com</b></a> &nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/darshan-parmar-dev/">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="https://x.com/drprockz">X</a> &nbsp;·&nbsp;
+  <a href="mailto:darshanrajeshparmar@gmail.com">Email</a>
 </p>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=drprockz&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+I'm an AI engineer in Mumbai. I design and ship agent systems: tool-using LLM agents, MCP servers, and the guardrails that let them act without a babysitter. Before that I spent 4+ years building full-stack SaaS with Next.js, NestJS, PostgreSQL and AWS, so the agents I build arrive with the API, the queue, the tests and the deploy.
 
----
+One idea runs through all of it: **let the agent do the work, and make it ask before anything it can't undo.**
 
-### A few things about me
+<br>
 
-- 🏠 Based in Mumbai, India
-- 🎓 Bachelor's in Computer Applications
-- 🥦 Vegetarian who takes food very seriously
-- 🎹 I start more hobby projects than I finish (working on it)
-- 🧩 I plan obsessively before I code -- CLAUDE.md files, architecture docs, the whole nine yards
+## CRUZ, a personal AI command center
 
----
+One natural-language interface in front of twelve specialist agents and five event-driven ones, running around the clock on a Mac mini. I talk to CRUZ; CRUZ decides who does the work.
 
-### Let's connect
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cruz-architecture-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/cruz-architecture-light.svg">
+  <img src="assets/cruz-architecture-dark.svg" width="100%" alt="CRUZ architecture. Voice, web and Telegram input reach CruzAgent, which uses Claude's native tool use as the router to twelve specialists. Deploys and email pass a human approval gate. A Redis-backed worker runs five event-driven agents. Memory has four layers, and models are routed between Claude Sonnet, local Qwen and Llama, and Gemini Flash.">
+</picture>
 
-[![Website](https://img.shields.io/badge/darshanparmar.com-000000?style=flat-square&logo=googlechrome&logoColor=white)](https://darshanparmar.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/darshan-parmar-dev/)
-[![X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/drprockz)
-[![Stack Overflow](https://img.shields.io/badge/Stack_Overflow-F58025?style=flat-square&logo=stackoverflow&logoColor=white)](https://stackoverflow.com/users/21765452)
-[![CodePen](https://img.shields.io/badge/CodePen-000000?style=flat-square&logo=codepen&logoColor=white)](https://codepen.io/drprockz)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtube.com/@UCvQTUsqVx7TunNIFsjEZOtQ)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:darshanrajeshparmar@gmail.com)
+- **Routing without a router.** Claude's native tool use picks the specialists and runs them in parallel. A deterministic keyword pre-filter narrows the tool list first, so there is no second LLM call just to decide who works.
+- **Approval gates on the irreversible.** Deploys and outgoing email stop for a human. Deploys roll back on their own if they fail.
+- **Cost-aware model routing.** Claude Sonnet handles orchestration, hard code and review. Local Qwen and Llama models (through Ollama) handle drafts, docs and tests. Gemini Flash handles lead discovery.
+- **Four memory layers**, from the context window to Qdrant vector search over everything it has ever been told.
+- **Voice in, voice out.** Wake word, faster-whisper for speech-to-text, a local TTS model for replies.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/cruz-trace-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/cruz-trace-light.svg">
+    <img src="assets/cruz-trace-dark.svg" width="410" alt="A CRUZ session. The user says the client site is broken in prod. Sentinel finds a failing null check, Forge patches it, QT reports 12 of 12 tests passing. CRUZ pauses for approval before deploying; after a yes, Titan deploys with rollback armed and Echo drafts a client update.">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/cruz-numbers-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/cruz-numbers-light.svg">
+    <img src="assets/cruz-numbers-dark.svg" width="410" alt="CRUZ by the numbers: 12 on-demand specialists, 5 event-driven agents, more than 1,200 tests, 4 memory layers. Python, FastAPI, Postgres, Redis, Qdrant.">
+  </picture>
+</p>
+
+<br>
+
+## AFK, a permission layer for Claude Code
+
+Claude Code stalls the moment you walk away from a permission prompt. [AFK](https://github.com/drprockz/AFK) learns how you answer those prompts, decides the safe ones for you, and holds the dangerous ones until you're back.
+
+<p align="center">
+  <a href="https://github.com/drprockz/AFK">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/afk-card-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/afk-card-light.svg">
+      <img src="assets/afk-card-dark.svg" width="410" alt="AFK: the permission layer that lets Claude Code keep working while you step away. Learns your approve and deny patterns, auto-approves safe actions, queues destructive ones for review, takes a git checkpoint before anything risky, and lets you approve from your phone. Open source, MIT.">
+    </picture>
+  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/afk-chain-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/afk-chain-light.svg">
+    <img src="assets/afk-chain-dark.svg" width="410" alt="AFK decision chain, seven checks in order: sensitive path (always ask), prompt injection (deny), destructive action (snapshot and defer), static rule (allow or deny), anomaly (notify and defer), behavior prediction (decide automatically at 0.85 confidence or higher), away fallback (ask by phone). Each request is decided in under 200 ms.">
+  </picture>
+</p>
+
+```
+/plugin marketplace add drprockz/afk-marketplace
+/plugin install afk@drprockz
+```
+
+<br>
+
+## MCP servers and Claude Code tooling
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/mcp-card-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/mcp-card-light.svg">
+    <img src="assets/mcp-card-dark.svg" width="410" alt="Shooterista MCP: a read-only MCP server that lets Claude answer questions about a live multi-tenant club-management SaaS. 32 typed tools over GraphQL, local stdio and hosted HTTP modes, OAuth with dynamic client registration and PKCE, no personal data requested, paced and cached calls. Private repository.">
+  </picture>
+  <a href="https://github.com/drprockz/claude-mods">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/dash-card-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="assets/dash-card-light.svg">
+      <img src="assets/dash-card-dark.svg" width="410" alt="session-dash: a Claude Code mod with a live sidebar and status line showing usage limits with pace, context breakdown, running agents and workflows, session and month cost, and all-time usage by model, project and tool.">
+    </picture>
+  </a>
+</p>
+
+<br>
+
+## Stack
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-ai-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stack-ai-light.svg">
+    <img src="assets/stack-ai-dark.svg" width="410" alt="AI and agents: Claude API, tool use, MCP, multi-agent orchestration, human-in-the-loop, semantic memory, Qdrant, embeddings, Ollama, Gemini, faster-whisper, Claude Code plugins.">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-backend-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stack-backend-light.svg">
+    <img src="assets/stack-backend-dark.svg" width="410" alt="Backend and data: Python, FastAPI, TypeScript, Node.js, NestJS, PostgreSQL, Prisma, Redis, ARQ workers, GraphQL, SSE streaming, PHP.">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-frontend-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stack-frontend-light.svg">
+    <img src="assets/stack-frontend-dark.svg" width="410" alt="Frontend: React, Next.js, Tailwind CSS, PWA and offline, GSAP, Three.js, Framer Motion, Vue, Astro, WordPress.">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-infra-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/stack-infra-light.svg">
+    <img src="assets/stack-infra-dark.svg" width="410" alt="Infra and quality: AWS, Docker, Nginx, GitHub Actions, Cloudflare Tunnel, PM2, Playwright, pytest, vitest, Lighthouse.">
+  </picture>
+</p>
+
+<br>
+
+## Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/activity-light.svg">
+  <img src="assets/activity-dark.svg" width="100%" alt="Contribution heatmap for the last 12 months, with total contributions, active days, current streak and longest streak.">
+</picture>
+
+<br>
+
+## How I work
+
+- **Plan first.** A spec, an architecture doc and a `CLAUDE.md` exist before the first commit.
+- **Tests are the contract.** CRUZ ships with 1,200+ of them; an agent's output isn't done until a test says so.
+- **Autonomy is earned.** Agents get more room as they prove themselves, and the irreversible always waits for a human.
+- **Spend where it matters.** The best model for the hard reasoning, a local one for the routine.
+
+<br>
+
+<p align="center">
+  <sub>Every figure on this page is an SVG drawn by <a href="scripts/build.mjs"><code>scripts/build.mjs</code></a>, and the heatmap is redrawn daily by <a href=".github/workflows/activity.yml">a GitHub Action</a>. No third-party widgets.</sub>
+</p>
+<p align="center">
+  <a href="https://stackoverflow.com/users/21765452">Stack Overflow</a> &nbsp;·&nbsp;
+  <a href="https://codepen.io/drprockz">CodePen</a> &nbsp;·&nbsp;
+  <a href="https://youtube.com/@UCvQTUsqVx7TunNIFsjEZOtQ">YouTube</a>
+</p>

@@ -1,0 +1,43 @@
+name: Refresh activity graph
+
+# Redraws assets/activity-*.svg from the contribution calendar.
+on:
+  schedule:
+    - cron: '23 1 * * *' # daily, 06:53 IST
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/activity.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: activity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Draw the heatmap
+        run: node scripts/activity.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GH_LOGIN: ${{ github.repository_owner }}
+
+      - name: Commit if it changed
+        run: |
+          git add assets/activity-dark.svg assets/activity-light.svg
+          if git diff --cached --quiet; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh activity graph"
+          git push

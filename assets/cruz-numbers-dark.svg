@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 300" width="410" height="300" font-size="12" role="img" aria-labelledby="t d">
+<title id="t">CRUZ by the numbers</title><desc id="d">12 on-demand specialists, 5 event-driven agents, more than 1,200 tests, 4 memory layers. Built with Python, FastAPI, Postgres, Redis and Qdrant.</desc>
+<style>
+text{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono','DejaVu Sans Mono',monospace;fill:#E9ECEF}
+.s{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif}
+.b{font-weight:700}
+.ink{fill:#E9ECEF}.mut{fill:#9AA3B0}.fnt{fill:#6B7482}.ag{fill:#34D6B9}.hu{fill:#FF8E4D}.st{fill:#F2707A}
+.lbl{font-size:10.5px;letter-spacing:.14em;fill:#6B7482}
+.box{fill:#12161D;stroke:#252C37}
+.ln{stroke:#252C37;fill:none}
+.sag{stroke:#34D6B9;fill:none}.shu{stroke:#FF8E4D;fill:none}
+.flow{stroke-dasharray:3 7;animation:flow 1.1s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-20}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+.big{font-size:40px;font-weight:800;letter-spacing:-1px}.c1{font-size:12px}.c2{font-size:11px}</style>
+<defs><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#1B212A"/></pattern>
+<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34D6B9" stop-opacity=".55"/><stop offset=".3" stop-color="#252C37"/><stop offset=".7" stop-color="#252C37"/><stop offset="1" stop-color="#FF8E4D" stop-opacity=".5"/></linearGradient></defs>
+<rect x=".5" y=".5" width="409" height="299" rx="14" fill="#0B0E13" stroke="url(#edge)"/>
+<rect x="1" y="1" width="408" height="298" rx="13" fill="url(#dots)"/>
+<text x="28" y="36" class="lbl">CRUZ · BY THE NUMBERS</text>
+<text x="27" y="100" class="s big ag">12</text><text x="28" y="124" class="ink c1">on-demand specialists</text><text x="28" y="141" class="mut c2">invoked in parallel</text><text x="211" y="100" class="s big ag">5</text><text x="212" y="124" class="ink c1">event-driven agents</text><text x="212" y="141" class="mut c2">cron + webhooks</text><text x="27" y="204" class="s big ag">1,200+</text><text x="28" y="228" class="ink c1">tests in the suite</text><text x="28" y="245" class="mut c2">agents · api · services</text><text x="211" y="204" class="s big ag">4</text><text x="212" y="228" class="ink c1">memory layers</text><text x="212" y="245" class="mut c2">context to vectors</text><path d="M28 254.5H382" class="ln"/><text x="28" y="277" class="mut" font-size="11.5">Python · FastAPI · Postgres · Redis · Qdrant</text>
+</svg>
